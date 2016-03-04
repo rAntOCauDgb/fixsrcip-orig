@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# $Id: fixsrcip 43 2004-11-22 20:57:29Z lennart $
+
+FIXSRCIPSO="./fixsrcip.so"
+
+if [ "$#" -lt 2 ] ; then
+	echo "Usage: $0 <IP address> <program> [<arguments> ...]" > /dev/stderr
+	exit 0
+fi
+
+if [ ! -f "$FIXSRCIPSO" ] ; then
+	echo "$FIXSRCIPSO not found!" > /dev/stderr
+	exit 1
+fi
+
+export LD_PRELOAD="$FIXSRCIPSO"
+export FIXSRCIP="$1"
+
+shift
+
+exec "$@"
