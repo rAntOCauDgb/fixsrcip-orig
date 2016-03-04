@@ -1,6 +1,6 @@
 github clone of (original, as at 2016-03-03) fixsrcip - http://0pointer.de/lennart/projects/fixsrcip/
 
-From fixsrcip-0.1/README:
+From fixsrcip-0.1/README
 -------------------------
 
 fixsrcip is a tool for binding outgoing TCP and UDP client sockets
